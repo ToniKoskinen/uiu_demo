@@ -2,7 +2,7 @@ import M from "materialize-css"
 import {useEffect, useState} from "react"
 
 const Dropdown = () => {
-    const [colSize,setColSize]=useState("col s6")
+    
     useEffect(() => {
         var elems = document.querySelectorAll('.dropdown-trigger');
         M.Dropdown.init(elems, {aligment: "center",coverTrigger: false, hover: true});
@@ -17,9 +17,11 @@ const Dropdown = () => {
           <form class="white col s10 offset-s1 hide-on-large-only">
                 <div class="input-field">
                 <input id="search" type="search" required/>
-                <label class="label-icon" for="search"><i class="material-icons search-icon">search</i></label>
+                <label for="search text-center"><i class="tiny material-icons search-icon">search</i>  Search for products</label>
                 <i class="material-icons">close</i>
+                
                 </div>
+                
           </form>
       </div>
       <div class="row col s12 hide-on-large-only">
@@ -48,14 +50,14 @@ const Dropdown = () => {
 
             <div class="category-wrapper">
             <ul class="category-list col s8 center">
-                <li><a href="#" class="center-align black-text">Fruits and vegetables</a></li>
-                <li><a href="#" class="center-align black-text">Meat</a></li>
-                <li><a href="#" class="center-align black-text">Milk products</a></li>
-                <li><a href="#" class="center-align black-text">Bread</a></li>
-                <li><a href="#" class="center-align black-text">Grain</a></li>
-                <li><a href="#" class="center-align black-text">Drinks</a></li>
-                <li><a href="#" class="center-align black-text">Hygiene</a></li>
-                <li><a href="#" class="center-align black-text">Housekeeping</a></li>
+                <li><a href="#!" class="center-align black-text">Fruits and vegetables</a></li>
+                <li><a href="#!" class="center-align black-text">Meat</a></li>
+                <li><a href="#!" class="center-align black-text">Milk products</a></li>
+                <li><a href="#!" class="center-align black-text">Bread</a></li>
+                <li><a href="#!" class="center-align black-text">Grain</a></li>
+                <li><a href="#!" class="center-align black-text">Drinks</a></li>
+                <li><a href="#!" class="center-align black-text">Hygiene</a></li>
+                <li><a href="#!" class="center-align black-text">Housekeeping</a></li>
             
         
 

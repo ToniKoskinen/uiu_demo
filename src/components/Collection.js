@@ -1,9 +1,12 @@
 import { useState } from "react"
+import Item from "./Item"
+const Collection = ({numberOfItems,changeNumberOfItems,numberOfFavorites,changeNumberOfFavorites}) => {
+  
 
-const Collection = () => {
+
 
     const [items, setItems] = useState([
-        {//All except the first product are made by ChatGPT, I have added some details such as price and clicked
+        {//All except the first product are made by ChatGPT, I have added some details such as price and clicked-attribute
           id: "1",
           name: "Fanta 1.5l",
           manufacturer: "Sin(y)hoff",
@@ -63,21 +66,18 @@ const Collection = () => {
         }
       ]);
     
-    const listItems=items.map((item)=> 
-        {return(
-        <li class="collection-item avatar" style={{margin: "20px"}}>
-              <i class="material-icons large square grey">image</i>
-              <div class="left-align">
-                    <h5><b>{item.name}</b></h5>
-                    <p><b>Manufacturer: </b>{item.manufacturer}</p>
-                    <p><b>Incredients: </b>{item.showDesc}<b>...show more</b></p>
-              </div>
-
-        </li>)})
-    return (
-        <div class="row">
-
-            <ul class="collection">
+    const listItems=items.map((item)=> {
+      
+      return (<li><Item item={item} numberOfItems={numberOfItems} changeNumberOfItems={changeNumberOfItems} numberOfFavorites={numberOfFavorites} changeNumberOfFavorites={changeNumberOfFavorites}></Item></li>
+    )})
+    
+    
+      return (
+        <div>
+          <div class="row">
+            <div class="card col box s12"><h5 class="white-text"><b>Popular products</b></h5></div>
+          </div>  
+            <ul class="row">
                 {listItems}
             </ul>
         </div>

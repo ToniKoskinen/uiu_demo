@@ -1,19 +1,27 @@
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+
 import './App.css';
 import Header from './components/Header';
 import Footer from "./components/Footer"
 import Dropdown from "./components/Dropdown"
 import Collection from './components/Collection';
+import { useState } from 'react';
 function App() {
+  const [numberOfItems,changeNumberOfItems]=useState("")
+  const [numberOfFavorites,changeNumberOfFavorites]=useState("")
   return (
-    <Router>
+   
     <div className="App">
-      <Routes>
-        <Route path="/" element={[<Header></Header>, <Dropdown></Dropdown>,<Collection></Collection>,<Footer></Footer>]}></Route>
-      </Routes>
+      
+      <Header></Header>
+      <Dropdown numberOfItems={numberOfItems} numberOfFavorites={numberOfFavorites}></Dropdown>
+      <Collection numberOfItems={numberOfItems}
+      changeNumberOfItems={changeNumberOfItems} numberOfFavorites={numberOfFavorites} changeNumberOfFavorites={changeNumberOfFavorites}></Collection>
+      <Footer numberOfItems={numberOfItems} numberOfFavorites={numberOfFavorites}></Footer>
+
+
       
     </div>
-    </Router>
+    
   );
 }
 

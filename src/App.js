@@ -1,8 +1,14 @@
+//The page has been implemented using Materialize framework and
+//its different designs such as cards, navbars, dropdown menus. 
+//https://materializecss.com/
 
+//All except one of the showed "products" in the app are made by ChatGPT, because the
+//the goal of this assignment was to demonstrate how would we implement the grocery store app,
+//and not pay attention to such details.
 import './App.css';
 import Header from './components/Header';
-import Footer from "./components/Footer"
-import Dropdown from "./components/Dropdown"
+import BottomBar from "./components/BottomBar"
+import Menu from "./components/Menu"
 import Collection from './components/Collection';
 import { useState } from 'react';
 function App() {
@@ -13,10 +19,10 @@ function App() {
     <div className="App">
       
       <Header></Header>
-      <Dropdown numberOfItems={numberOfItems} numberOfFavorites={numberOfFavorites}></Dropdown>
+      <Menu numberOfItems={numberOfItems} numberOfFavorites={numberOfFavorites}></Menu>
       <Collection numberOfItems={numberOfItems}
       changeNumberOfItems={changeNumberOfItems} numberOfFavorites={numberOfFavorites} changeNumberOfFavorites={changeNumberOfFavorites}></Collection>
-      <Footer numberOfItems={numberOfItems} numberOfFavorites={numberOfFavorites}></Footer>
+      <BottomBar numberOfItems={numberOfItems} numberOfFavorites={numberOfFavorites}></BottomBar>
 
 
       

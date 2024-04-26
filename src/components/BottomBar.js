@@ -1,5 +1,5 @@
 
-const Footer = ({numberOfItems,numberOfFavorites}) => {
+const BottomBar = ({numberOfItems,numberOfFavorites}) => {
     return(
         
         <nav class="row grey lighten-4 footer">
@@ -18,4 +18,4 @@ const Footer = ({numberOfItems,numberOfFavorites}) => {
     
     )
 }
-export default Footer
+export default BottomBar

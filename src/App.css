@@ -121,5 +121,9 @@ body {
     display: none;
   }
 }
-
+@media screen and (max-width: 450px) {
+  Header {
+    font-size: 10pt;
+  }
+}
 /*1185*/

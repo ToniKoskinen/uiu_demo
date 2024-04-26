@@ -36,7 +36,7 @@ const Item = ({item,numberOfItems,changeNumberOfItems,numberOfFavorites,changeNu
             }
         } else {
             setFavouriteButtonContent("star_border")
-            if (numberOfFavorites==1){
+            if (numberOfFavorites===1){
                 changeNumberOfFavorites("")
             } else{
                 changeNumberOfFavorites(numberOfFavorites-1)
@@ -61,13 +61,13 @@ const Item = ({item,numberOfItems,changeNumberOfItems,numberOfFavorites,changeNu
                 <div class="card-content">
                 <i class="col s1 center material-icons large">image</i>
                 <br></br>
-                <span class="card-title">{item.name}<a onClick={favFunction} class="btn-flat"><i class="medium material-icons right-align">{favouriteButtonContent}</i></a>
+                <span class="card-title">{item.name}<a onClick={favFunction} class="btn-flat"><i class="large material-icons right-align">{favouriteButtonContent}</i></a>
                 </span>
                 <h5 class="right-align"><b>{item.price} €</b></h5>
                 <button onClick={addItem} class="right showButton amount-selectors">+</button>
                 <p class="amount-selectors right"><b>{amount}</b></p>
                 <button onClick={removeItem} class="right showButton amount-selectors"><b>-</b></button>
-                <p class="right amount-selectors"><b>Amount: </b></p>
+                <p class="amount-selectors right"><b>Amount: </b></p><br/>
                 
                 <p class="left-align"><b>Manufacturer: </b>{item.manufacturer}</p>
                 <p class="left-align"><b>Description: </b>{descriptionContent}<button class="showButton" onClick={descFunction}>{showButtonContent}</button></p>

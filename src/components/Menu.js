@@ -1,13 +1,12 @@
 import M from "materialize-css"
-import {useEffect, useState} from "react"
-
-const Dropdown = ({numberOfItems,numberOfFavorites}) => {
+import {useEffect} from "react"
+//Contains dropdown/navbar menus depending screen width
+const Menu = ({numberOfItems,numberOfFavorites}) => {
     
     useEffect(() => {
         var elems = document.querySelectorAll('.dropdown-trigger');
         M.Dropdown.init(elems, {aligment: "center",coverTrigger: false});
-        var tabs = document.querySelectorAll(".tabs")
-        M.Tabs.init(tabs,{})
+
 
 
       }, []);
@@ -60,7 +59,7 @@ const Dropdown = ({numberOfItems,numberOfFavorites}) => {
           </form>
       </div>
       <div class="row col s12 hide-on-large-only">
-        <a class='col s10 offset-s1 m10 offset-m1 grey lighten-2 dropdown-trigger center-align btn black-text center-align' href='#' data-target='dropdown1'>Categories<i class="material-icons right">arrow_drop_down</i></a>
+        <a class='col s10 offset-s1 m10 offset-m1 grey lighten-2 dropdown-trigger center-align btn black-text center-align' href='#!' data-target='dropdown1'>Categories<i class="material-icons right">arrow_drop_down</i></a>
       
         <ul id='dropdown1' class='dropdown-content'>
           <li><a href="#!" class="center-align black-text">Fruits and vegetables</a></li>
@@ -89,4 +88,4 @@ const Dropdown = ({numberOfItems,numberOfFavorites}) => {
         )
 }
 
-export default Dropdown
+export default Menu
